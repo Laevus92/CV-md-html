@@ -25,3 +25,23 @@ I'm always looking for oportunity to learn somthing new. And I think it will be 
 ***
 ### **Skills:**
 I just started to learn JavaScript in RSSchool. I shure, that i finish my learning and get important skills, that I will could use in my work and my life :)
+
+***
+### **Code examples:**
+**Codewar registration task:** *This code does not execute properly. Try to figure out why.*
+```javascript
+function multiply(a, b){
+  a * b
+}
+```
+**Solution:**
+```javascript
+function multiply(a, b){
+  a * b
+  return a * b
+}
+```
+
+***
+### **Completed projects:**
+1. [CV#1. Markdown & Git](https://laevus92.github.io/rsschool-cv/cv)
