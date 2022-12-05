@@ -7,7 +7,6 @@
 * **E-mail:** laevus@yandex.ru
 * **Discord:** @Laevus92
 * [Text to Telegram](https://t.me/denis_bold)
-* **Telegram:** @denis_bold
 
 ***
 ### **About myself:**
