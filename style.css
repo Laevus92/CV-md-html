@@ -1,0 +1,278 @@
+body {
+  margin: 0;
+  font-family: 'Mulish', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  
+  font-size: 16px;
+  line-height: 1.5;
+  color: #363636;
+ 
+  display: flex;
+  flex-direction: column;
+  
+
+  min-height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* container */
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* nav */
+
+.nav {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.nav-list{
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-item {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.nav-link {
+  color: rgb(245, 251, 255, 1);
+  text-decoration: none;
+  transition: color .2s linear;
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #ffeb00;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity .2s linear;
+
+}
+
+.nav-link:hover {
+  color:#ffeb00;
+}
+
+.nav-link:hover::after {
+  opacity: 1;
+}
+
+
+/* header */
+.header {
+  width: 100%;
+  background-color: #f5a96d;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+}
+
+
+/* main */
+
+.main {
+  flex-grow: 1;
+}
+
+.userpic {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 60%);
+  filter: grayscale(0.2) brightness(1.05);
+  transition: .3s;
+  padding: 10px;
+  margin: 36px;
+  margin-left: 20%;
+}
+
+.container-name-avatar {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  font-size: 40px;
+  background-color: #f5f5f5;
+}
+
+.title {
+  padding-right: 20%;
+  line-height: 1;
+}
+.title-name {
+  width: 365px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.title-name:after {
+  content: "";
+  display: block;
+  width: 230px;
+  height: 6px;
+  background-color: rgb(0, 0, 0);
+  margin: 30px auto 0;
+}
+.subtitle-profession {
+  text-align: center;
+  font-size: 32px;
+  font-family: mulsh, sans-serif;
+  font-weight: 100;
+}
+
+.section {
+  width: 100%;
+  max-width: 770px;
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+}
+.container-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#contacts {
+  width: 700px;
+}
+#education {
+  width: 1200px;
+}
+
+.section-list-contacts {
+  list-style: none;
+  line-height: 1.5;
+}
+.section-item-contacts-item::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.section-item-contacts-item:nth-child(1)::before {
+  background-image: url(./assets/img/location.png);
+}
+
+.section-item-contacts-item:nth-child(2)::before {
+  background-image: url(./assets/img/gmail.png);
+}
+
+.section-item-contacts-item:nth-child(3)::before {
+  background-image: url(./assets/img/github.png);
+}
+
+.section-item-contacts-item:nth-child(4)::before {
+  background-image: url(./assets/img/telegram.png);
+}
+
+.section-item-contacts-item:nth-child(5)::before {
+  background-image: url(./assets/img/discord\ \(1\).png);
+}
+
+.section {
+  position: relative;
+  padding: 10px;
+  margin: 20px;
+}
+
+li {
+  margin-bottom: 20px;
+}
+
+#code {
+  width: 700px;
+  line-height: 1.5;
+}
+
+#courses {
+  width: 1200px;
+}
+a {
+  text-decoration: none;
+  font-weight: 505;
+  color: #f5a96d;
+}
+
+#language {
+  padding-left: 250px;
+}
+span {
+  color: #f5a96d;
+}
+
+.footer {
+  background-color: #f5a96d;
+  flex-shrink: 0;
+  color: #fff;
+}
+.footer__inner {
+  margin: 20px;
+  padding: 10px;
+
+  display: flex;
+  justify-content:space-around;
+}
+.a_footer {
+color: #fff;
+font-weight: 400;
+}
+
+.logo_rs {
+  height: 35px;
+  filter: invert(1);
+}
+
+.contact_link {
+  position: relative;
+}
+
+.contact_link:hover {
+  color: #f5a96d;
+}
+
+.contact_link:hover::before {
+  transform: scaleX(1);
+  transition: 0.2s linear;
+}
+
+.contact_link::before {
+  content: '';
+  width: 100%;
+  height: 3px;
+  background-color: #f5a96d;
+  position: absolute;
+  left: 0; bottom: -5px;
+  transform: scaleX(0);
+  transform-origin: left;
+  }
+  .header-logo {
+    font-family: 'inika';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20.85px;
+  }
