@@ -1,1 +1,5 @@
-console.log ('1. верстка валидная результат проверки "Document checking completed. No errors or warnings to show." +10\n 2.Верстка семантическая +20\n3. Верстка соответствует макету, расхождения менее 10 пикселей +10\n4. Требования к CSS соблюдены +12\n5. Реализована интерактивность через CSS +20\nИтоговая оценка 100 баллов')
+function onClick() {
+    document.getElementById('burger').classList.toggle('active');
+    document.getElementById('popup-menu').classList.toggle('active');
+    document.getElementById('body').classList.toggle('active');
+    }
