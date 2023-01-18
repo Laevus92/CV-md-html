@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=1440px, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plants</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inika&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <script src="./index.js"></script>
 </head>
-<body>
+<body class="body" id="body">
     <header class="header">
         <nav class="nav">
             <div class="logo">
@@ -38,9 +39,32 @@
                         <a href="#contact" class="nav-link">Contacts</a>
                     </li>
                 </ul>
+                <div class="burger-menu" id="burger" onclick="onClick();">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
         </nav>
     </header>
+        <div class="pop-up" id="popup-menu" onclick="onClick();">
+            <ul class="pop-up__links">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about-us" class="nav-link">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#service" class="nav-link">Service</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#price" class="nav-link">Price</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contacts</a>
+                </li>
+            </ul>
+    </div>
     <main class="main">
         <div class="container-green">
             <section class="home" id="home">
@@ -87,7 +111,9 @@
                 </div>
                 <div class="service-list">
                     <div class="servise-item">
-                        <img src="./assets/png/first.png" alt="women-with-plant.png" class="service-img">
+                        <div class="cropped-img">
+                            <img src="./assets/png/first.png" alt="women-with-plant.png" class="service-img">    
+                        </div>
                         <div class="title-service-img">
                             <p class="service-img-title">
                                 Garden care
@@ -98,7 +124,9 @@
                         </div>
                     </div>
                     <div class="servise-item">
-                        <img src="./assets/png/second.png" alt="fruit-on-the-tree.png" class="service-img">
+                        <div class="cropped-img">
+                            <img src="./assets/png/second.png" alt="fruit-on-the-tree.png" class="service-img">
+                        </div>
                         <div class="title-service-img">
                             <p class="service-img-title">
                                 Planting
@@ -109,7 +137,9 @@
                         </div>
                     </div>
                     <div class="servise-item">
-                        <img src="./assets/png/third.png" alt="women-with-sprayer.png" class="service-img">
+                        <div class="cropped-img">
+                            <img src="./assets/png/third.png" alt="women-with-sprayer.png" class="service-img">
+                        </div>
                         <div class="title-service-img">
                             <p class="service-img-title">
                                 Lawn care
@@ -120,7 +150,9 @@
                         </div>
                     </div>
                     <div class="servise-item">
-                        <img src="./assets/png/fourth.png" alt="women-with-flowers.png" class="service-img">
+                        <div class="cropped-img">
+                            <img src="./assets/png/fourth.png" alt="women-with-flowers.png" class="service-img">
+                        </div>
                         <div class="title-service-img">
                             <p class="service-img-title">
                                 Planting
@@ -131,7 +163,9 @@
                         </div>
                     </div>
                     <div class="servise-item">
-                        <img src="./assets/png/fives.png" alt="succulents.png" class="service-img">
+                        <div class="cropped-img">
+                            <img src="./assets/png/fives.png" alt="succulents.png" class="service-img">
+                        </div>
                         <div class="title-service-img">
                             <p class="service-img-title">
                                 Garden care
@@ -142,7 +176,9 @@
                         </div>
                     </div>
                     <div class="servise-item">
-                        <img src="./assets/png/sixth.png" alt="cactus.png" class="service-img">
+                        <div class="cropped-img">
+                            <img src="./assets/png/sixth.png" alt="cactus.png" class="service-img">
+                        </div>
                         <div class="title-service-img">
                             <p class="service-img-title">
                                 Planting
@@ -199,13 +235,13 @@
         </div>
         <div class="container-green">
             <section class="contact" id="contact">
+                <div class="contact-section-img">
+                    <img src="./assets/png/contact_woman1.png" alt="gardeners.png" class="contact-img">
+                </div>
                 <div class="contact-section-title">
                     <h2 class="section-title">
                         Contact us
                     </h2>
-                </div>
-                <div class="contact-section-img">
-                    <img src="./assets/png/contact_woman1.png" alt="gardeners.png" class="contact-img">
                 </div>
                 <div class="contact-item">
                     <p class="contact-title">
