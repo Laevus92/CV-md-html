@@ -10,6 +10,10 @@ function onClick() {
     const gardensButton = document.querySelector(".service-head > div > button:nth-child(1)");
     const lawnButton = document.querySelector(".service-head > div > button:nth-child(2)");
     const plantingButton = document.querySelector(".service-head > div > button:nth-child(3)");
+    const basicButton = document.querySelector("#price > div.prices > div > div:nth-child(1) > div.tariff-item.basic > div");
+    const standartButton = document.querySelector("#price > div.prices > div > div:nth-child(2) > div.tariff-item.standard > div");
+    const proCareButton = document.querySelector("#price > div.prices > div > div:nth-child(3) > div.tariff-item.pro-care > div");
+
 
     gardensButton.addEventListener('click', function () {
         if (lawnButton.classList.contains('active') && plantingButton.classList.contains('active')) {
@@ -67,3 +71,75 @@ function onClick() {
             servicesLawn.forEach(element => element.classList.toggle('blur'));
         }
     });
+
+    basicButton.addEventListener('click', () => {
+        if ((standartButton.style.transform === 'rotate(180deg)') || (proCareButton.style.transform === 'rotate(180deg)')) {
+            standartButton.style.transform = 'rotate(0deg)';
+            proCareButton.style.transform = 'rotate(0deg)';
+            document.querySelector("#price > div.prices > div > div:nth-child(2) > div.tariff-item.standard").classList.remove('active');
+            document.querySelector("#price > div.prices > div > div:nth-child(2) > div.tarif-content").classList.remove('active');
+            document.querySelector("#price > div.prices > div > div:nth-child(3) > div.tariff-item.pro-care").classList.remove('active');
+            document.querySelector("#price > div.prices > div > div:nth-child(3) > div.tarif-content").classList.remove('active');
+            if (basicButton.style.transform === 'rotate(180deg)') {
+                basicButton.style.transform = 'rotate(0deg)';
+            } else {
+                basicButton.style.transform = 'rotate(180deg)';
+            }
+        } else {
+            if (basicButton.style.transform === 'rotate(180deg)') {
+                basicButton.style.transform = 'rotate(0deg)';
+            } else {
+                basicButton.style.transform = 'rotate(180deg)';
+            }
+        }
+        document.querySelector("#price > div.prices > div > div:nth-child(1) > div.tariff-item.basic").classList.toggle('active');
+        document.querySelector("#price > div.prices > div > div:nth-child(1) > div.tarif-content").classList.toggle('active');
+    })
+    
+    standartButton.addEventListener('click', () => {
+        if ((basicButton.style.transform === 'rotate(180deg)') || (proCareButton.style.transform === 'rotate(180deg)')) {
+            basicButton.style.transform = 'rotate(0deg)';
+            proCareButton.style.transform = 'rotate(0deg)';
+            document.querySelector("#price > div.prices > div > div:nth-child(1) > div.tariff-item.basic").classList.remove('active');
+            document.querySelector("#price > div.prices > div > div:nth-child(1) > div.tarif-content").classList.remove('active');
+            document.querySelector("#price > div.prices > div > div:nth-child(3) > div.tariff-item.pro-care").classList.remove('active');
+            document.querySelector("#price > div.prices > div > div:nth-child(3) > div.tarif-content").classList.remove('active');
+            if (standartButton.style.transform === 'rotate(180deg)') {
+                standartButton.style.transform = 'rotate(0deg)';
+            } else {
+                standartButton.style.transform = 'rotate(180deg)';
+            }
+        } else {
+            if (standartButton.style.transform === 'rotate(180deg)') {
+                standartButton.style.transform = 'rotate(0deg)';
+            } else {
+                standartButton.style.transform = 'rotate(180deg)';
+            }
+        }
+        document.querySelector("#price > div.prices > div > div:nth-child(2) > div.tariff-item.standard").classList.toggle('active');
+        document.querySelector("#price > div.prices > div > div:nth-child(2) > div.tarif-content").classList.toggle('active');
+    })
+    
+    proCareButton.addEventListener('click', () => {
+        if ((basicButton.style.transform === 'rotate(180deg)') || (standartButton.style.transform === 'rotate(180deg)')) {
+            basicButton.style.transform = 'rotate(0deg)';
+            standartButton.style.transform = 'rotate(0deg)';
+            document.querySelector("#price > div.prices > div > div:nth-child(1) > div.tariff-item.basic").classList.remove('active');
+            document.querySelector("#price > div.prices > div > div:nth-child(1) > div.tarif-content").classList.remove('active');
+            document.querySelector("#price > div.prices > div > div:nth-child(2) > div.tariff-item.standard").classList.remove('active');
+            document.querySelector("#price > div.prices > div > div:nth-child(2) > div.tarif-content").classList.remove('active');
+            if (proCareButton.style.transform === 'rotate(180deg)') {
+                proCareButton.style.transform = 'rotate(0deg)';
+            } else {
+                proCareButton.style.transform = 'rotate(180deg)';
+            }
+        } else {
+            if (proCareButton.style.transform === 'rotate(180deg)') {
+                proCareButton.style.transform = 'rotate(0deg)';
+            } else {
+                proCareButton.style.transform = 'rotate(180deg)';
+            }
+        }
+        document.querySelector("#price > div.prices > div > div:nth-child(3) > div.tariff-item.pro-care").classList.toggle('active');
+        document.querySelector("#price > div.prices > div > div:nth-child(3) > div.tarif-content").classList.toggle('active');
+    })

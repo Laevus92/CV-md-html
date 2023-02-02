@@ -387,35 +387,11 @@ p.service-img-text {
     width: 17.361vw;
     height: 3.672vw;
     background: #EDF2EC;
-    border-radius: 20px;
+    border-radius: 1.389vw;
     cursor: pointer;
     position: relative;
 }
 
-
-.tariff-item::before {
-    content:'';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: #4a9a1846;
-    border-radius: 20px;
-    transition: all .3s linear;
-}
-
-.tariff-item:hover::before {
-    width: 100%;
-}
-
-.tariff-item:nth-child(1) {
-    margin: 5.3% 0 0 0;
-}
-
-.tariff-item:nth-child(3) {
-    margin: 0 0 5% 0;
-}
 
 p.tariff-title {
     font-family: 'inter';
@@ -433,6 +409,79 @@ p.tariff-title {
     align-items: center;
     display: flex;
     justify-content: center;
+    transition: 0.2s linear;
+}
+
+.tarif-content {
+    margin: 0;
+    height: 0px;
+    visibility: hidden;
+    transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-radius: 0 0 1.389vw 1.389vw;
+    background: #D6E7D2;
+    width: 17.361vw;
+    color: #717171;
+    font-family: inter;
+    font-size: 0.694vw;
+    opacity: 0;
+    width: 17.361vw;
+}
+
+.tarif-content.active {
+    visibility: visible;
+    height: 8.222vw;
+    opacity: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.order {
+    display: flex;
+    width: 5.972vw;
+    height: 1.736vw;
+    background: #FFFFFF;
+    border-radius: 0.694vw;
+    text-align: center;
+    margin: 0.833vw 0 0.833vw 2.778vw;
+    font-family: inter;
+    color: #717171;
+    font-size: 0.972vw;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+}
+
+.tarif-content.active::before {
+    content: '';
+    position: absolute;
+    left: 2.778vw;
+    background: #AEA1A1;
+    width: 65.6%;
+    height: 0.5px;
+}
+
+ p.tarif-description {
+    width: 11.736vw;
+    margin: 0.417vw 2.778vw;
+ }
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.tariff-item.basic.active,
+.tariff-item.standard.active,
+.tariff-item.pro-care.active {
+    border-radius: 1.389vw 1.389vw 0 0 ;
+    background: #D6E7D2;
+}
+
+p.tarif-price {
+    margin: 0 2.778vw;
+    color: #000;
 }
 
 .contact-us {
@@ -441,6 +490,22 @@ p.tariff-title {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+}
+
+.\$ {
+    display: inline;
+    font-family: inter;
+    font-size: 0.833vw;
+    color: #E06733;
+    font-weight: 700;
+}
+
+span.price {
+    display: inline;
+    font-family: inter;
+    font-size: 1.111vw;
+    color: #E06733;
+    font-weight: 700;
 }
 
 .price-text {
@@ -464,6 +529,9 @@ p.tariff-title {
     margin: 8.9% 0.1% 0% 0;
     font-weight: 700;
     transition: .1s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .button-contact:hover {
@@ -963,11 +1031,46 @@ p.tariff-title {
         width: 47.36842vw;
         height: 13.08421vw;
     }
-    .tariff-item:nth-child(1) {
-        margin: 9.4% 0 0 0;
 
-    }.tariff-item:nth-child(3) {
-        margin: 0px 0 9.7% 0;
+    .tarif-content {
+        width: 47.361vw;
+        height: 0px;
+        font-size: 1.994vw;
+    }
+
+    .tarif-content.active {
+    height: 18.222vw;
+
+    }
+
+
+    .tarif-content.active::before {
+        left: 6.378vw;
+    } 
+
+    p.tarif-description {
+        width: 34.736vw;
+        margin: 1.417vw 6.378vw;
+    }
+
+    p.tarif-price {
+        font-size: 1.994vw;
+        margin: 0 0 0 6.378vw;
+    }
+
+    span.price {
+        font-size: 1.994vw;
+    }
+
+    .\$ {
+        font-size: 1.394vw;
+    }
+
+    .order {
+        width: 12.572vw;
+        height: 3.236vw;
+        margin: 0.833vw 0 0.233vw 6.378vw;
+        font-size: 1.972vw;
     }
 
     p.tariff-title {
@@ -1347,6 +1450,47 @@ p.tariff-title {
         margin: 17.2% 0 0 0;
     }
 
+    .tarif-content {
+        width: 32.561vw;
+        height: 0px;
+        font-size: 1.294vw;
+    }
+
+    .tarif-content.active {
+    height: 15.222vw;
+
+    }
+
+
+    .tarif-content.active::before {
+        left: 5.478vw;
+    } 
+
+    p.tarif-description {
+        width: 21.536vw;
+        margin: 1.417vw 5.478vw;;
+    }
+
+    p.tarif-price {
+        font-size: 1.294vw;
+        margin: 0 0 0 5.478vw;
+    }
+
+    span.price {
+        font-size: 1.294vw
+    }
+
+    .\$ {
+        font-size: 0.894vw;
+    }
+
+    .order {
+        width: 12.572vw;
+        height: 3.236vw;
+        margin: 0.833vw 0 0.233vw 5.478vw;;
+        font-size: 1.972vw;
+    }
+
     .tariff-item {
         width: 32.55208vw;
         height: 6.510417vw;
@@ -1624,9 +1768,6 @@ p.tariff-title {
         margin: 60px 0 0 0;
     }
 
-    .tariff-item:nth-child(1) {
-        margin: 17px 0 0 0;
-    }
     .tariff-item {
         width: 250px;
         height: 50px;
@@ -1654,6 +1795,46 @@ p.tariff-title {
         height: 50px;
         font-size: 20px;
         margin: 40.2px 0px 0% 0;
+    }
+
+    .tarif-content {
+        width: 250px;
+        height: 0px;
+        font-size: 10px;
+    }
+
+    .tarif-content.active {
+        height: 119px;
+
+    }
+
+    .tarif-content.active::before {
+        left: 40px;
+    } 
+
+    p.tarif-description {
+        width: 169px;
+        margin: 6px 40px;
+    }
+
+    p.tarif-price {
+        font-size: 12px;
+        margin: 0 0 0 40px;
+    }
+
+    span.price {
+        font-size: 17px;
+    }
+
+    .\$ {
+        font-size: 12px;
+    }
+
+    .order {
+        width: 86px;
+        height: 25px;
+        margin: 12px 0 12px 40px;
+        font-size: 14px;
     }
 
     .price-img {
@@ -1727,8 +1908,4 @@ p.tariff-title {
     .social-list-items:nth-child(4)>.social-media> .social-media-logo {
         width: 28px;
     }
-
-
-
-    
 }
