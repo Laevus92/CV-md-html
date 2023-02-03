@@ -13,6 +13,8 @@ function onClick() {
     const basicButton = document.querySelector("#price > div.prices > div > div:nth-child(1) > div.tariff-item.basic > div");
     const standartButton = document.querySelector("#price > div.prices > div > div:nth-child(2) > div.tariff-item.standard > div");
     const proCareButton = document.querySelector("#price > div.prices > div > div:nth-child(3) > div.tariff-item.pro-care > div");
+    const adressesButton = document.querySelector("#contact > div.contact-wrapper > div.contact-item > div");
+
 
 
     gardensButton.addEventListener('click', function () {
@@ -142,4 +144,99 @@ function onClick() {
         }
         document.querySelector("#price > div.prices > div > div:nth-child(3) > div.tariff-item.pro-care").classList.toggle('active');
         document.querySelector("#price > div.prices > div > div:nth-child(3) > div.tarif-content").classList.toggle('active');
+    })
+
+    adressesButton.addEventListener('click', () => {
+        if (adressesButton.style.transform === '' && !document.querySelector("#contact > div.contact-wrapper > div.contact-item").classList.contains('active')) {
+            adressesButton.style.transform = 'rotate(180deg)';
+            adressesButton.style.background = '#8BA07E';
+            document.querySelector("#contact > div.contact-wrapper > div.contact-item > p").innerHTML = 'City'
+            document.querySelector("#contact > div.contact-wrapper > div.adresses").classList.add('active');
+            document.querySelector("#contact > div.contact-wrapper > div.contact-item").classList.add('active');
+        } else if (adressesButton.style.transform === 'rotate(180deg)' && document.querySelector("#contact > div.contact-wrapper > div.contact-item").classList.contains('active')) {
+            document.querySelector("#contact > div.contact-section-img").style.visibility = 'visible';
+            adressesButton.style.transform = '';
+            adressesButton.style.background = '#AEA1A1';
+            document.querySelector("#contact > div.contact-wrapper > div.adresses").classList.remove('active');
+            document.querySelector("#contact > div.contact-wrapper > div.contact-item").classList.remove('active');
+        } else if (adressesButton.style.transform === '' && document.querySelector("#contact > div.contact-wrapper > div.contact-item").classList.contains('active')) {
+            adressesButton.style.transform = 'rotate(180deg)';
+            adressesButton.style.background = '#8BA07E';
+            document.querySelectorAll("#contact > div.contact-wrapper > div.contact").forEach(element => element.classList.remove('active'));
+            document.querySelector("#contact > div.contact-wrapper > div.adresses").classList.add('active');
+            document.querySelector("#contact > div.contact-wrapper > div.contact-item > p").innerHTML = 'City'
+        }
+
+        const conandaiguaCity = document.querySelector("#contact > div.contact-wrapper > div.adresses.active > div:nth-child(1)");
+        const newYorkCity = document.querySelector("#contact > div.contact-wrapper > div.adresses.active > div:nth-child(2)");
+        const yonkersCity = document.querySelector("#contact > div.contact-wrapper > div.adresses.active > div:nth-child(3)");
+        const sherrillCity = document.querySelector("#contact > div.contact-wrapper > div.adresses.active > div:nth-child(4)");
+
+        conandaiguaCity.addEventListener('click', () => {
+            if (window.innerWidth < 700) {
+                document.querySelector("#contact > div.contact-section-img").style.visibility = 'hidden';
+                document.querySelector("#contact > div.contact-wrapper > div.contact-item > p").innerHTML = 'Canandaigua, NY';
+                document.querySelector("#contact > div.contact-wrapper > div.adresses.active").classList.remove('active');
+                document.querySelector("#contact > div.contact-wrapper > div.contact.canandaigua").classList.add('active');
+                adressesButton.style.transform = '';
+                adressesButton.style.background = '#AEA1A1';
+            } else {
+                 document.querySelector("#contact > div.contact-wrapper > div.contact-item > p").innerHTML = 'Canandaigua, NY';
+                 document.querySelector("#contact > div.contact-wrapper > div.contact.canandaigua").classList.add('active');
+                 adressesButton.style.transform = '';
+                 adressesButton.style.background = '#AEA1A1';
+                 document.querySelector("#contact > div.contact-wrapper > div.adresses.active").classList.remove('active');
+            }
+        })
+
+        newYorkCity.addEventListener('click', () => {
+            if (window.innerWidth < 700) {
+                document.querySelector("#contact > div.contact-section-img").style.visibility = 'hidden';
+                document.querySelector("#contact > div.contact-wrapper > div.contact-item > p").innerHTML = 'New York City';
+                document.querySelector("#contact > div.contact-wrapper > div.adresses.active").classList.remove('active');
+                document.querySelector("#contact > div.contact-wrapper > div.contact.new-york-city").classList.add('active');
+                adressesButton.style.transform = '';
+                adressesButton.style.background = '#AEA1A1';
+            } else {
+                document.querySelector("#contact > div.contact-wrapper > div.contact-item > p").innerHTML = 'New York City';
+                document.querySelector("#contact > div.contact-wrapper > div.adresses.active").classList.remove('active');
+                document.querySelector("#contact > div.contact-wrapper > div.contact.new-york-city").classList.add('active');
+                adressesButton.style.transform = '';
+                adressesButton.style.background = '#AEA1A1';
+            }
+        })
+
+        yonkersCity.addEventListener('click', () => {
+            if (window.innerWidth < 700) {
+                document.querySelector("#contact > div.contact-section-img").style.visibility = 'hidden';
+                document.querySelector("#contact > div.contact-wrapper > div.contact-item > p").innerHTML = 'Yonkers, NY';
+                document.querySelector("#contact > div.contact-wrapper > div.adresses.active").classList.remove('active');
+                document.querySelector("#contact > div.contact-wrapper > div.contact.yonkers").classList.add('active');
+                adressesButton.style.transform = '';
+                adressesButton.style.background = '#AEA1A1';
+            } else {
+                document.querySelector("#contact > div.contact-wrapper > div.contact-item > p").innerHTML = 'Yonkers, NY';
+                document.querySelector("#contact > div.contact-wrapper > div.adresses.active").classList.remove('active');
+                document.querySelector("#contact > div.contact-wrapper > div.contact.yonkers").classList.add('active');
+                adressesButton.style.transform = '';
+                adressesButton.style.background = '#AEA1A1';
+            }
+        })
+
+        sherrillCity.addEventListener('click', () => {
+            if (window.innerWidth < 700) {
+                document.querySelector("#contact > div.contact-section-img").style.visibility = 'hidden';
+                document.querySelector("#contact > div.contact-wrapper > div.contact-item > p").innerHTML = 'Sherrill, NY';
+                document.querySelector("#contact > div.contact-wrapper > div.adresses.active").classList.remove('active');
+                document.querySelector("#contact > div.contact-wrapper > div.contact.sherrill").classList.add('active');
+                adressesButton.style.transform = '';
+                adressesButton.style.background = '#AEA1A1';
+            } else {
+                document.querySelector("#contact > div.contact-wrapper > div.contact-item > p").innerHTML = 'Sherrill, NY';
+                document.querySelector("#contact > div.contact-wrapper > div.adresses.active").classList.remove('active');
+                document.querySelector("#contact > div.contact-wrapper > div.contact.sherrill").classList.add('active');
+                adressesButton.style.transform = '';
+                adressesButton.style.background = '#AEA1A1';
+            }
+        })
     })

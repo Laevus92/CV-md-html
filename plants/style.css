@@ -599,16 +599,9 @@ span.price {
     cursor: pointer;
 }
 
-.contact-item::before {
-    content:'';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 0%;
-    background: #4a9a1846;
-    border-radius: 4px;
-    transition: all .3s linear;
+.contact-item.active {
+    box-shadow: none;
+    background: #C1E698;
 }
 
 .contact-item:hover::before {
@@ -626,6 +619,104 @@ span.price {
 
 .contact-img {
     width: 27.778vw;
+}
+
+.contact-wrapper {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+div.contact {
+    position: absolute;
+    border: 1px solid black;
+    width: 31.111vw;
+    height: 0px;
+    border-radius: 1.389vw;
+    display: flex;
+    flex-direction: column;
+    top: 17.014vw;
+    visibility: hidden;
+    opacity: 0;
+    transition: .2s linear;
+}
+
+div.contact.yonkers.active, 
+div.contact.canandaigua.active,
+div.contact.sherrill.active,
+div.contact.new-york-city.active {
+    height: 14.861vw;
+    visibility: visible;
+    opacity: 1;
+}
+
+table {
+    width: 23.542vw;
+    height: 11.458vw;
+    font-family: inter;
+    font-size: 1.111vw;
+    margin: 1.181vw 0 0 2.292vw;
+}
+
+.call-us {
+    width: 8.472vw;
+    height: 2.653vw;
+    border: 1px solid #E06733;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.347vw;
+    margin: 1.667vw 0 2.222vw 11.25vw;
+    color:#717171;
+    font-family: inika;
+    font-size: 0.694vw;
+}
+
+td.title {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 1.111vw;
+    color: #000;
+}
+
+td {
+    color: #717171;
+}
+
+.adresses {
+    width: 31.042vw;
+    height: 0px;
+    position: absolute;
+    top: 13.681vw;
+    visibility: hidden;
+    opacity: 0;
+    transition: .2s linear;
+}
+
+.adresses.active {
+    height: 16.25px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.city-name {
+    width: 26.389vw;
+    height: 2.431vw;
+    margin: 0.833vw 0 0 2.431vw;
+    color: #499A18;
+    font-family: inter;
+    font-size: 1.111vw;
+    border-bottom: 1px solid #D9D9D9;
+    transition: .2s linear;
+}
+
+.city-name:hover{
+    color: #717171;
+    border-bottom: 1px solid #717171;
+}
+
+.city-name:nth-child(1) {
+    margin-top: 1.875vw;
 }
 
 /*footer*/
@@ -1129,7 +1220,7 @@ span.price {
         width: 78.94737vw;
         height: 13.15789vw;
         font-size: 5.92632vw;
-        top: 31.1%;
+        top: 36vw;
         right: 0.5%;
     }
 
@@ -1153,7 +1244,45 @@ span.price {
         width: 26.31579vw;
     }
 
-    
+    .adresses {
+        width: 78.947vw;
+        top: 51.381vw;
+    }
+
+    .city-name {
+        width: 71.389vw;
+        height: 8.431vw;
+        font-size: 4.211vw;
+    }
+
+    div.contact {
+        width: 74.211vw;
+        top: 55.895vw;
+    }
+
+    div.contact.yonkers.active, div.contact.canandaigua.active, div.contact.sherrill.active, div.contact.new-york-city.active {
+        height: 55.789vw;
+    }
+
+    table {
+        width: 55.263vw;
+        height: 43.684vw;
+        font-size: 4.211vw;
+        margin: 6.053vw 0 0 0;
+    }
+
+    td.title {
+        font-size: 4.211vw;
+    }
+
+    .call-us {
+        width: 31.105vw;
+        height: 6.862vw;
+        border-radius: 2.347vw;
+        margin: 0 0 3vw 0px;
+        font-size: 2.632vw;
+    }
+
     footer {
     position: relative;
     }
@@ -1394,7 +1523,7 @@ span.price {
     }
 
     .cropped-img {
-        width: 100%;
+        width: 36.3vw;
         /* max-width: 280px; */
         height: 45.573vw;
         max-height: 350px;
@@ -1547,8 +1676,7 @@ span.price {
         width: 58.59375vw;
         height: 6.510417vw;
         font-size: 2.604167vw;
-        top: 25.8%;
-        right: -16%;
+        top: 24.7vw;
     }
 
     .contact-section-img {
@@ -1557,6 +1685,54 @@ span.price {
         left: 36.3%;
         top: 0.5%;
         position: relative;
+    }
+
+    .adresses {
+        width: 58.542vw;
+        top: 31.181vw;
+    }
+
+    .city-name:nth-child(1) {
+        margin-top: 3.875vw;
+    }
+    .city-name {
+        width: 49.479vw;
+        height: 4.557vw;
+        margin: 0.833vw 0 0 2.431vw;
+        font-size: 2.083vw;
+    }
+
+    div.contact {
+        width: 58.333vw;
+        border-radius: 2.604vw;
+        top: 34.957vw;
+    }
+
+    div.contact.yonkers.active, 
+    div.contact.canandaigua.active, 
+    div.contact.sherrill.active, 
+    div.contact.new-york-city.active {
+        height: 27.865vw;
+    }
+
+    table {
+        width: 43.229vw;
+        height: 14.323vw;
+        font-family: inter;
+        font-size: 2.083vw;
+        margin: 2.214vw 0 0 4.297vw;
+    }
+
+    td.title {
+        font-size: 2.083vw;
+    }
+
+    .call-us {
+        width: 15.885vw;
+        height: 3.385vw;
+        border-radius: 0.651vw;
+        margin: 1.667vw 0 4.167vw 21.094vw;
+        font-size: 1.302vw;
     }
 
     .contact-img {
@@ -1865,6 +2041,60 @@ span.price {
         height: 50px;
         font-size: 20px;
         top: 148px;
+    }
+
+    div.contact {
+        width: 448px;
+        height: 0px;
+        border-radius: 20px;
+        top: 245px;
+    }  
+
+    div.contact.yonkers.active, 
+    div.contact.canandaigua.active,
+    div.contact.sherrill.active,
+    div.contact.new-york-city.active {
+        height: 214px;
+    }
+
+    table {
+        width: 339px;
+        height: 165px;
+        font-size: 16px;
+        margin: 17px 0 0 33px;
+    }
+
+    .call-us {
+        width: 122px;
+        height: 38.2px;
+        border-radius: 5px;
+        margin: 24px 0 32px 162px;
+        font-size: 10px;
+    }
+
+    td.title {
+        font-size: 16px;
+    }
+
+    .adresses {
+        width: 447px;
+        height: 0px;
+        top: 197px;
+    }
+
+    .adresses.active {
+        height: 234px;
+    }
+
+    .city-name {
+        width: 380px;
+        height: 35px;
+        margin: 12px 0 0 35px;
+        font-size: 16px;
+    }
+
+    .city-name:nth-child(1) {
+        margin-top: 27px;
     }
 
     .contact {
